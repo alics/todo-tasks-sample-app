@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ApiStandardResults\**" />
+    <Compile Remove="EqualityHelpers\**" />
+    <Compile Remove="Expressions\**" />
+    <Compile Remove="Extensions\**" />
+    <Compile Remove="Security\**" />
+    <EmbeddedResource Remove="ApiStandardResults\**" />
+    <EmbeddedResource Remove="EqualityHelpers\**" />
+    <EmbeddedResource Remove="Expressions\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <EmbeddedResource Remove="Security\**" />
+    <None Remove="ApiStandardResults\**" />
+    <None Remove="EqualityHelpers\**" />
+    <None Remove="Expressions\**" />
+    <None Remove="Extensions\**" />
+    <None Remove="Security\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Exceptions\CrmGeneralErrorType.cs" />
+    <Compile Remove="Exceptions\ErrorCodeConstants.cs" />
+    <Compile Remove="Exceptions\InvalidMaxLengthArgumentException.cs" />
+    <Compile Remove="Exceptions\InvalidRequiredArgumentException.cs" />
+    <Compile Remove="Exceptions\RethrowBusinessException.cs" />
+    <Compile Remove="OperationOptions.cs" />
+    <Compile Remove="Queries\ISortablePropertyCollection.cs" />
+    <Compile Remove="Queries\SortableQueryFilter.cs" />
+    <Compile Remove="Queries\SortDirection.cs" />
+    <Compile Remove="Queries\SortExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\TodoApplication.Common\TodoApplication.Common.csproj" />
+  </ItemGroup>
+
+</Project>
