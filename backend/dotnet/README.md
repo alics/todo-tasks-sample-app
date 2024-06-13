@@ -1,8 +1,6 @@
 # Project Architecture Documentation Overview
 This document provides an overview of the architecture of todo tasks simple applicaton, a .NET Web API application implementing hexagonal architecture, clean architecture, and Domain-Driven Design (DDD) principles. The project aims to provide a structured and modular approach for building and maintaining a Todo Task Management system.
 
-**It should be mentioned that this architecture might seem over-engineering for this simple project. In this task, however, I wanted to demonstrate my skills in an enterprise project.**
-
 # Hexagonal and Clean Architecture
 Hexagonal architecture, also known as Ports and Adapters architecture, is utilized in todo tasks application to achieve loose coupling and separation of concerns. The key components of the hexagonal architecture in this project include:
 
