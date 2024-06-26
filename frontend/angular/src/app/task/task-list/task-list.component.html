@@ -1,0 +1,101 @@
+<mat-form-field class="w-full">
+  <mat-label>{{ 'input.search.label' | translate }}</mat-label>
+  <input
+    matInput
+    (input)="onQueryChange($event)"
+    [placeholder]="'input.search.placeholder' | translate"
+    [ngModel]="query()"
+    (ngModelChange)="query.set($event)"
+  />
+  @if (query()) {
+    <button
+      matSuffix
+      mat-icon-button
+      [attr.aria-label]="'uni.clear' | translate"
+      (click)="onQueryRemove()"
+      [matTooltip]="'uni.clear' | translate"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  }
+</mat-form-field>
+
+<div class="flex items-end justify-end gap-2">
+  <a mat-button [routerLink]="['/' + ROUTE_DEFINITION.TASKS.CREATE | localize]">{{ 'uni.create' | translate }}</a>
+</div>
+
+<table
+  mat-table
+  [dataSource]="data()"
+  matSort
+  [matSortActive]="sortBy()"
+  [matSortDirection]="sortDirection()"
+  matSortDisableClear
+  multiTemplateDataRows
+  (matSortChange)="onSortChange($event)"
+>
+  <colgroup>
+    <col width="auto" />
+    <col width="auto" />
+    <col width="auto" />
+    <col width="auto" />
+    <col width="50" />
+  </colgroup>
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ 'table.tasks.id.title' | translate }}</th>
+    <td mat-cell *matCellDef="let row">
+      {{ '#' + row.id }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>{{ 'table.tasks.title.title' | translate }}</th>
+    <td mat-cell *matCellDef="let row" class="font-bold">{{ row.title }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="deadline">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+      {{ 'table.tasks.deadline.title' | translate }}
+    </th>
+    <td mat-cell *matCellDef="let row">{{ row.deadline | date: 'yyyy-MM-dd' }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+      {{ 'table.tasks.status.title' | translate }}
+    </th>
+    <td mat-cell *matCellDef="let row">{{ taskStatus[row.status!] }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>&nbsp;</th>
+    <td mat-cell *matCellDef="let row">
+      <button mat-icon-button [matMenuTriggerFor]="menu" [attr.aria-label]="'uni.aria-label.show-actions' | translate">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item [routerLink]="['/' + row.id + '/' + ROUTE_DEFINITION.TASKS.EDIT | localize]">
+          <mat-icon>edit</mat-icon>
+          <span>{{ 'uni.edit' | translate }}</span>
+        </a>
+        <button mat-menu-item [appTaskDelete]="row.id" (deleted)="onDeleted(row.id)">
+          <mat-icon>delete</mat-icon>
+          <span>{{ 'uni.delete' | translate }}</span>
+        </button>
+      </mat-menu>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<mat-paginator
+  [pageSizeOptions]="pageSizeOptions"
+  [pageSize]="pageSize()"
+  [pageIndex]="pageIndex() - 1"
+  [length]="totalCount()"
+  (page)="onPageChange($event)"
+  [attr.aria-label]="'uni.aria-label.select-page-of-tasks' | translate"
+></mat-paginator>

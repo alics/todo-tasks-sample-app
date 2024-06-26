@@ -1,0 +1,54 @@
+<mat-card>
+  <mat-card-content class="flex flex-col gap-2 mt-2 text-center">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" (reset)="onReset($event)">
+      <mat-form-field class="w-full">
+        <mat-label>{{ 'form.task.title.label' | translate }}</mat-label>
+        <input matInput type="text" formControlName="title" />
+        @if (form.controls.title.value) {
+          <button
+            matSuffix
+            mat-icon-button
+            [attr.aria-label]="'uni.clear' | translate"
+            (click)="form.controls.title.setValue('')"
+            [matTooltip]="'uni.clear' | translate"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>{{ 'form.task.deadline.label' | translate }}</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          placeholder="{{ 'form.task.deadline.placeholder' | translate }}"
+          formControlName="deadline"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+
+        @if (form.controls.deadline.value) {
+          <button
+            matSuffix
+            mat-icon-button
+            [attr.aria-label]="'uni.clear' | translate"
+            (click)="(form.controls.deadline.setValue)"
+            [matTooltip]="'uni.clear' | translate"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+
+      <div class="flex justify-center gap-2">
+        <button mat-button color="primary" [disabled]="form.pristine" type="reset">
+          {{ 'uni.reset' | translate }}
+        </button>
+        <button mat-flat-button color="primary" [disabled]="form.pristine || form.invalid" type="submit">
+          {{ 'uni.submit' | translate }}
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

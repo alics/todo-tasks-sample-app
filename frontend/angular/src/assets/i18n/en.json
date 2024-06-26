@@ -1,0 +1,128 @@
+{
+  "custom-confirm-dialog": {
+    "default": {
+      "content": "Do you want to confirm operation?",
+      "title": "Confirm operation"
+    },
+    "delete-task": {
+      "content": "Do you want to delete task?",
+      "title": "Delete task"
+    },
+    "unsaved-work": {
+      "content": "Do you really want to leave this page?",
+      "title": "Unsaved work"
+    }
+  },
+  "error": {
+    "task-was-not-found": "Task was not found",
+    "unexpected-exception": "Unexpected error"
+  },
+  "footer": {
+    "content": "All rights reserved © {{ endYear }}"
+  },
+  "form": {
+    "task": {
+      "title": {
+        "label": "Title"
+      },
+      "deadline": {
+        "label": "Deadline"
+      },
+      "status": {
+        "label": "Status"
+      }
+    }
+  },
+  "input": {
+    "search": {
+      "label": "Search",
+      "placeholder": "Type something here…"
+    }
+  },
+  "mat-paginator": {
+    "first-page": "First page",
+    "items-per-page": "Items per page",
+    "last-page": "Last page",
+    "next-page": "Next page",
+    "of": "from",
+    "previous-page": "Previous page"
+  },
+  "not-found": {
+    "content": "Page was not found"
+  },
+  "response": {
+    "create": {
+      "failed": "Creation failed",
+      "success": "Successfully created"
+    },
+    "delete": {
+      "failed": "Deletion failed",
+      "success": "Successfully deleted"
+    },
+    "update": {
+      "failed": "Update failed",
+      "success": "Succesfully updated"
+    }
+  },
+  "routes": {
+    "app": {
+      "not-found": "not-found",
+      "tasks": "tasks"
+    },
+    "tasks": {
+      "create": "create",
+      "detail": "detail",
+      "edit": "edit"
+    }
+  },
+  "table": {
+    "tasks": {
+      "id": {
+        "title": "ID"
+      },
+      "title": {
+        "title": "Title"
+      },
+      "deadline": {
+        "title": "Deadline"
+      },
+      "status": {
+        "title": "Status"
+      }
+    }
+  },
+  "titles": {
+    "action": {
+      "create": "Create",
+      "detail": "Detail",
+      "edit": "Edit",
+      "list": "List"
+    },
+    "section": {
+      "not-found": "Not found",
+      "tasks": "Tasks"
+    }
+  },
+  "uni": {
+    "aria-label": {
+      "arrow-icon": "Arrow icon",
+      "error-icon": "Error icon",
+      "expand-row": "expand row",
+      "row-actions": "row actions",
+      "select-page-of-tasks": "Select page of tasks",
+      "show-actions": "Zobrazit akce",
+      "warning-icon": "Warning icon"
+    },
+    "clear": "Clear",
+    "clear-filters": "Clear filters",
+    "close": "Close",
+    "create": "Create",
+    "delete": "Delete",
+    "detail": "Detail",
+    "edit": "Edit",
+    "no": "No",
+    "reset": "Reset",
+    "submit": "Submit",
+    "yes": "Yes"
+  }
+}

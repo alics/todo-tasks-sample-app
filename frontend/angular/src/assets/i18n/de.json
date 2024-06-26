@@ -1,0 +1,128 @@
+{
+  "custom-confirm-dialog": {
+    "default": {
+      "content": "Möchten Sie den Vorgang bestätigen?",
+      "title": "Vorgang bestätigen"
+    },
+    "delete-task": {
+      "content": "Möchten Sie die Aufgabe löschen?",
+      "title": "Aufgabe löschen"
+    },
+    "unsaved-work": {
+      "content": "Möchten Sie diese Seite wirklich verlassen?",
+      "title": "Nicht gespeicherte Arbeit"
+    }
+  },
+  "error": {
+    "task-was-not-found": "Aufgabe wurde nicht gefunden",
+    "unexpected-exception": "Unerwarteter Fehler"
+  },
+  "footer": {
+    "content": "Alle Rechte vorbehalten © {{ endYear }}"
+  },
+  "form": {
+    "task": {
+      "title": {
+        "label": "Titel"
+      },
+      "deadline": {
+        "label": "Frist"
+      },
+      "status": {
+        "title": "Status"
+      }
+    }
+  },
+  "input": {
+    "search": {
+      "label": "Suche",
+      "placeholder": "Geben Sie etwas ein…"
+    }
+  },
+  "mat-paginator": {
+    "first-page": "Erste Seite",
+    "items-per-page": "Elemente pro Seite",
+    "last-page": "Letzte Seite",
+    "next-page": "Nächste Seite",
+    "of": "von",
+    "previous-page": "Vorherige Seite"
+  },
+  "not-found": {
+    "content": "Seite wurde nicht gefunden"
+  },
+  "response": {
+    "create": {
+      "failed": "Erstellung fehlgeschlagen",
+      "success": "Erfolgreich erstellt"
+    },
+    "delete": {
+      "failed": "Löschen fehlgeschlagen",
+      "success": "Erfolgreich gelöscht"
+    },
+    "update": {
+      "failed": "Aktualisierung fehlgeschlagen",
+      "success": "Erfolgreich aktualisiert"
+    }
+  },
+  "routes": {
+    "app": {
+      "not-found": "nicht-gefunden",
+      "tasks": "aufgaben"
+    },
+    "tasks": {
+      "create": "erstellen",
+      "detail": "detail",
+      "edit": "bearbeiten"
+    }
+  },
+  "table": {
+    "tasks": {
+      "id": {
+        "title": "ID"
+      },
+      "title": {
+        "title": "Titel"
+      },
+      "deadline": {
+        "title": "Frist"
+      },
+      "status": {
+        "title": "Status"
+      }
+    }
+  },
+  "titles": {
+    "action": {
+      "create": "Erstellen",
+      "detail": "Detail",
+      "edit": "Bearbeiten",
+      "list": "Liste"
+    },
+    "section": {
+      "not-found": "Nicht gefunden",
+      "tasks": "Aufgaben"
+    }
+  },
+  "uni": {
+    "aria-label": {
+      "arrow-icon": "Pfeilsymbol",
+      "error-icon": "Fehlersymbol",
+      "expand-row": "Reihe erweitern",
+      "row-actions": "Reihenaktionen",
+      "select-page-of-tasks": "Seite der Aufgaben auswählen",
+      "show-actions": "Aktionen anzeigen",
+      "warning-icon": "Warnsymbol"
+    },
+    "clear": "Löschen",
+    "clear-filters": "Filter löschen",
+    "close": "Schließen",
+    "create": "Erstellen",
+    "delete": "Löschen",
+    "detail": "Detail",
+    "edit": "Bearbeiten",
+    "no": "Nein",
+    "reset": "Zurücksetzen",
+    "submit": "Absenden",
+    "yes": "Ja"
+  }
+}
