@@ -1,4 +1,21 @@
 {
-  "singleQuote": true,
-  "trailingComma": "all"
+  "editor.defaultFormatter": null,
+  "[javascript]": {
+      "editor.defaultFormatter": null
+  },
+  "[javascriptreact]": {
+      "editor.defaultFormatter": null
+  },
+  "[typescript]": {
+      "editor.defaultFormatter": null
+  },
+  "[typescriptreact]": {
+      "editor.defaultFormatter": null
+  },
+  "prettier/prettier": [
+  "error",
+  {
+    "endOfLine": "auto"
+  }
+]
 }
