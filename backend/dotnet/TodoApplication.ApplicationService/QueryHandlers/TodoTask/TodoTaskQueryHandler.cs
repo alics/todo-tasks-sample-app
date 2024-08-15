@@ -42,6 +42,8 @@ public class TodoTaskQueryHandler : IQueryHandler<TodoTasksQueryFilter, Collecti
 
             if (filter.Status.HasValue)
                 query = query.Where(x => x.Status == filter.Status);
+
+            query.Include(x => x.TaskHistories);
         }
 
         var result = await query.Select(task => new TodoTaskQueryResult
@@ -51,6 +53,9 @@ public class TodoTaskQueryHandler : IQueryHandler<TodoTasksQueryFilter, Collecti
             Status = task.Status,
             Deadline = task.Deadline.Date,
             CreationDate = task.CreationDate
+           
+
+
         }).ToListAsync();
 
         return new CollectionQueryResult<TodoTaskQueryResult>(result);
